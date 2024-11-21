@@ -1,5 +1,5 @@
 @font-face{
-	font-family: 'Dia';
+	font-family: 'Ball';
 	src: url('Balloon-Regular.woff2') format('woff2');
 	font-weight: 400;
 }
@@ -7,6 +7,6 @@
 body{
 	/* this is the outermost element on your page*/
 	background: yellow;
-	font-family: 'Dia';
+	font-family: 'Ball';
 	font-size: 100px;
 }
