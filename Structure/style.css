@@ -6,7 +6,7 @@ body{
 }
 
 main{
-	border: 1px solid white;
+	border: 0.5px solid white;
 	border-top: 0;
 	border-bottom: 0;
 	height: 100vh;
@@ -18,17 +18,30 @@ main{
 	gap: 20px;
 	box-sizing: border-box;
 	padding: 3rem 0;
+	overflow: hidden;
 }
 .txt_red{
 	color:red;
 }
-.txt_big{
+.txt_big_1{
 	color:#A7A992;
-	font-size:240px;
+	font-size:270px;
 	line-height:0.8;
 	font-weight:600;
-	left:-100px;
+	position: relative;
+	left:-20px;
+	letter-spacing: -10px;
 }
+.txt_big_2{
+	color:#E7E2CD;
+	font-size:270px;
+	line-height:0.8;
+	font-weight:600;
+	position: relative;
+	right:210px;
+	letter-spacing: -10px;
+}
+
 .grid_1{
 	grid-column-start: 2;
 	grid-column-end: 5;
