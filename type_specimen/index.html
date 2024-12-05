@@ -7,6 +7,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<h1 class="tit_bal">Type Specimen</h1>
-</body>
+	<h1 class="tit_bal">Balloon Typeface</h1>
+	 <div class="container">
+        <div class="slider-container">
+            <label for="font-size-slider">Font Size:</label>
+            <input type="range" id="font-size-slider" min="50" max="300" value="100">
+            <span id="font-size-value">100pt</span>
+        </div>
+        <div id="output" contenteditable="true" spellcheck="false">The quick brown fox jumps over the lazy dog
+        </div>
+    </div>
+    <script src="script.js"></script>
 </html>

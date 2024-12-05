@@ -21,7 +21,7 @@ body{
 	/* this is the outermost element on your page*/
 	background: white;
 	font-family: 'Ball';
-	font-size:12px;
+	font-size:30px;
 	line-height:1.5;
 }
 .tit_bal {
@@ -29,4 +29,85 @@ body{
 	font-size:100px;
 	line-height:102px;
 	padding-top: 14px;
+	margin-left: 20px;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* 검정 배경 */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    color: #fff; /* 기본 텍스트 흰색 */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.slider-container {
+    width: 100%;
+    padding: 10px;
+    background-color: #000; /* 검정 배경 */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    z-index: 1;
+}
+
+input[type="range"] {
+    width: 30%;
+    cursor: pointer;
+    height: 6px;
+    background: #555; /* 어두운 슬라이더 배경 */
+    border-radius: 5px;
+    outline: none;
+    appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background: #fff; /* 흰색 슬라이더 핸들 */
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+}
+
+#font-size-value {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff; /* 흰색 텍스트 */
+}
+
+#output {
+    font-family: 'Ball', sans-serif;
+    font-size: 100pt;
+    color: #fff; /* 흰색 텍스트 */
+    width: calc(100% - 40px);
+    max-width: 1920px;
+    height: calc(100% - 60px);
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    display: block;
+    box-sizing: border-box;
+    overflow-y: auto;
+    /* 줄 간격 조절 */
+    line-height: 1.1; /* 1.2 배로 설정 (기본은 1.5) */
 }
