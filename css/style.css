@@ -29,10 +29,12 @@ body{
 	font-size:100px;
 	line-height:102px;
 	padding-top: 14px;
+	margin-left: 20px;
 }
 .list_nav {
     overflow: hidden;
     padding: 14px 0 0;
+    margin-left: 20px;
 }
 .list_nav li{float: left;}
 .list_nav li+li{margin-left: 40px;}

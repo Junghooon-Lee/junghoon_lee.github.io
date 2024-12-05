@@ -27,7 +27,7 @@ body{
 .tit_bal {
 	font-weight: normal;
 	font-size:100px;
-	line-height:102px;
+	line-height:1.1;
 	padding-top: 14px;
 	margin-left: 20px;
 }
@@ -67,7 +67,7 @@ body {
 }
 
 input[type="range"] {
-    width: 30%;
+    width: 10%;
     cursor: pointer;
     height: 6px;
     background: #555; /* 어두운 슬라이더 배경 */
