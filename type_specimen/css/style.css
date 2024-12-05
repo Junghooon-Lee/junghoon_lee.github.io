@@ -30,13 +30,3 @@ body{
 	line-height:102px;
 	padding-top: 14px;
 }
-.list_nav {
-    overflow: hidden;
-    padding: 14px 0 0;
-}
-.list_nav li{float: left;}
-.list_nav li+li{margin-left: 40px;}
-.link_nav{
-	font-size:40px;
-	line-height:42px;
-}
