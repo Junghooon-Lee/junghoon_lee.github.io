@@ -30,7 +30,7 @@ main{
 	font-weight:600;
 	position: relative;
 	left:-20px;
-	letter-spacing: -10px;
+	letter-spacing: -12px;
 }
 .txt_big_2{
 	color:#E7E2CD;
@@ -38,8 +38,8 @@ main{
 	line-height:0.8;
 	font-weight:600;
 	position: relative;
-	right:210px;
-	letter-spacing: -10px;
+	right:200px;
+	letter-spacing: -12px;
 }
 
 .grid_1{
