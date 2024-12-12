@@ -17,97 +17,89 @@ a {color:#333;text-decoration:none}
 a:active, a:hover {text-decoration:underline}
 address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
 
-body{
-	/* this is the outermost element on your page*/
-	background: white;
-	font-family: 'Ball';
-	font-size:30px;
-	line-height:1.5;
-}
-.tit_bal {
-	font-weight: normal;
-	font-size:100px;
-	line-height:1.1;
-	padding-top: 14px;
-	margin-left: 20px;
-}
 body {
+    font-family: 'Ball', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000; /* 검정 배경 */
-    display: flex;
-    flex-direction: column;
+    background-color: #fff; /* 배경색 */
+    color: #861694; /* 기본 텍스트 색상 */
     height: 100vh;
     overflow: hidden;
-    color: #fff; /* 기본 텍스트 흰색 */
-}
-
-.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    justify-content: center;
 }
 
+/* 슬라이더 플로팅 */
 .slider-container {
-    width: 100%;
-    padding: 10px;
-    background-color: #000; /* 검정 배경 */
-    text-align: center;
+    width:90%;
+    position: fixed; /* 플로팅 */
+    top: 40px; /* 화면 상단에서 20px 떨어짐 */
+    left: 50%; /* 가로 중앙 정렬 */
+    transform: translateX(-50%); /* 가운데 정렬 보정 */
+    /*background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
+    padding: 10px 20px;
+    border-radius: 10px;
+    z-index: 1000; /* 다른 요소보다 위로 */
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 10px;
-    z-index: 1;
 }
 
-input[type="range"] {
-    width: 10%;
-    cursor: pointer;
-    height: 6px;
-    background: #555; /* 어두운 슬라이더 배경 */
-    border-radius: 5px;
-    outline: none;
+#font-size-slider {
+    -webkit-appearance: none; /* 기본 스타일 제거 */
     appearance: none;
+    width: 100%; /* 슬라이더 너비 */
+    height: 20px; /* 슬라이더 두께 */
+    background: #ff4040;
+    border-radius: 10px;
+    outline: none;
+    transition: opacity 0.2s;
 }
 
-input[type="range"]::-webkit-slider-thumb {
-    width: 15px;
-    height: 15px;
-    background: #fff; /* 흰색 슬라이더 핸들 */
+#font-size-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border: 10px solid #ff4040;
     border-radius: 50%;
     cursor: pointer;
-    appearance: none;
+    transition: transform 0.2s; /* 애니메이션 효과 */
+}
+
+#font-size-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.5); /* 호버 시 핸들 커짐 */
 }
 
 #font-size-value {
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff; /* 흰색 텍스트 */
+    font-size: 24px;
+    color: #861694;
+}
+
+/* 텍스트 중앙 정렬 및 중앙 고정 */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 #output {
     font-family: 'Ball', sans-serif;
-    font-size: 100pt;
-    color: #fff; /* 흰색 텍스트 */
-    width: calc(100% - 40px);
-    max-width: 1920px;
-    height: calc(100% - 60px);
-    margin: 0 auto;
-    padding: 0;
+    font-size: 500pt;
+    text-align: center;
+    color: #861694; /* 내부 텍스트를 투명하게 */
+    -webkit-text-stroke: 5px #FF3B80; /* 초기 스트로크 두께와 색상 */
+    background-color: transparent;
     border: none;
     outline: none;
-    background-color: transparent;
     overflow-wrap: break-word;
     white-space: pre-wrap;
-    display: block;
-    box-sizing: border-box;
-    overflow-y: auto;
-    /* 줄 간격 조절 */
-    line-height: 1.1; /* 1.2 배로 설정 (기본은 1.5) */
+    line-height: 1.1;
+    width: 100%; /* 화면 너비 전체 */
+    max-width: 90%; /* 최대 너비 제한 */
+    height: auto; /* 높이는 텍스트 크기에 따라 동적으로 변경 */
 }
