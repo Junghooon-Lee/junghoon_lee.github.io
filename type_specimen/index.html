@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Balloon Type Specimen</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="slider-container">
-        <input type="range" id="font-size-slider" min="50" max="800" value="500">
-        <span id="font-size-value">500pt</span>
-    </div>
-    <div class="container">
-        <div id="output" contenteditable="true" spellcheck="false">Balloon</div>
+    <!-- 흑백 모드 토글 버튼 -->
+    <button id="toggle-mode" class="toggle-button"></button>
+    <div class="wrapper">
+        <!-- 첫 번째 타입 테스터 섹션 -->
+        <section class="type-tester section-1">
+            <div class="slider-container">
+                <input type="range" id="font-size-slider-1" min="50" max="800" value="800">
+                <span id="font-size-value-1">800pt</span>
+            </div>
+            <div class="container">
+                <div id="output-1" contenteditable="true" spellcheck="false">Balloon</div>
+            </div>
+        </section>
+        <!-- 두 번째 타입 테스터 섹션 -->
+        <section class="type-tester section-2">
+            <div class="slider-container">
+                <input type="range" id="font-size-slider-2" min="50" max="800" value="70">
+                <span id="font-size-value-2">70pt</span>
+            </div>
+            <div class="container">
+                <div id="output-2" contenteditable="true" spellcheck="false">Jeff Koons' Balloon Dog is one of his most iconic works, blending the playful imagery of a balloon animal with the refined craftsmanship of contemporary art. Created from highly polished stainless steel with a mirror-like surface, the sculpture transforms an ephemeral, childlike object into a monumental and permanent form. Its reflective surface engages viewers by mirroring their surroundings, creating an interactive experience. By elevating a simple balloon dog into a large-scale, luxurious artwork, Koons explores themes of nostalgia, consumerism, and the intersection of high and low culture. The Balloon Dog series stands as a testament to Koons' ability to recontextualize everyday objects into thought-provoking, visually striking art.</div>
+            </div>
+        </section>
+        <!-- 세 번째 타입 테스터 섹션 -->
+        <section class="type-tester section-3">
+            <div class="slider-container">
+                <input type="range" id="font-size-slider-3" min="50" max="800" value="180">
+                <span id="font-size-value-3">180pt</span>
+            </div>
+            <div class="container">
+                <div id="output-3" contenteditable="true" spellcheck="false">Balloon typeface is a playful and rounded style of lettering that feels soft, light, and full of fun.
+                </div>
+            </div>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>

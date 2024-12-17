@@ -21,85 +21,200 @@ body {
     font-family: 'Ball', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fff; /* 배경색 */
-    color: #861694; /* 기본 텍스트 색상 */
+    background-color: #fff;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.type-tester {
+    flex: none;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden; /* 섹션을 벗어난 텍스트 숨김 */
 }
 
-/* 슬라이더 플로팅 */
-.slider-container {
-    width:90%;
-    position: fixed; /* 플로팅 */
-    top: 40px; /* 화면 상단에서 20px 떨어짐 */
-    left: 50%; /* 가로 중앙 정렬 */
-    transform: translateX(-50%); /* 가운데 정렬 보정 */
-    /*background-color: rgba(0, 0, 0, 0.8); /* 반투명 배경 */
-    padding: 10px 20px;
-    border-radius: 10px;
-    z-index: 1000; /* 다른 요소보다 위로 */
-    display: flex;
-    align-items: center;
-    gap: 10px;
+/* 각 섹션별 스타일 */
+.section-1 {
+    background: linear-gradient(120deg, #FFDDC1, #FFABAB);
 }
 
-#font-size-slider {
-    -webkit-appearance: none; /* 기본 스타일 제거 */
-    appearance: none;
-    width: 100%; /* 슬라이더 너비 */
-    height: 20px; /* 슬라이더 두께 */
-    background: #ff4040;
-    border-radius: 10px;
-    outline: none;
-    transition: opacity 0.2s;
+.section-2 {
+    background: linear-gradient(120deg, #C1EFFF, #ABABFF);
 }
 
-#font-size-slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 80px;
-    height: 80px;
-    background: #fff;
-    border: 10px solid #ff4040;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: transform 0.2s; /* 애니메이션 효과 */
+.section-3 {
+    background: linear-gradient(120deg, #D7FFD9, #AFF8DB);
 }
 
-#font-size-slider::-webkit-slider-thumb:hover {
-    transform: scale(1.5); /* 호버 시 핸들 커짐 */
-}
-
-#font-size-value {
-    font-size: 24px;
-    color: #861694;
-}
-
-/* 텍스트 중앙 정렬 및 중앙 고정 */
 .container {
+    flex: 1;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 }
 
-#output {
+#output-1 {
     font-family: 'Ball', sans-serif;
-    font-size: 500pt;
     text-align: center;
-    color: #861694; /* 내부 텍스트를 투명하게 */
-    -webkit-text-stroke: 5px #FF3B80; /* 초기 스트로크 두께와 색상 */
-    background-color: transparent;
-    border: none;
+    color: #FF3B80;
+    -webkit-text-stroke: 3px #861694;
+    /*text-transform: uppercase;
+    font-style: italic;*/
+}
+
+#output-2 {
+    font-family: 'Ball', sans-serif;
+    text-align: left;
+    color: #3B80FF;
+    -webkit-text-stroke: 2px #1A237E;
+    /*text-shadow: 2px 2px 5px #00000033;*/
+}
+
+#output-3 {
+    font-family: 'Ball', sans-serif;
+    text-align: right;
+    color: #009688;
+    -webkit-text-stroke: 1px #004D40;
+    /*letter-spacing: 0.1em;*/
+}
+
+.slider-container {
+    position: absolute;
+    top: 10%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+}
+
+.slider-container input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 20px;
+    background: #861694;
     outline: none;
-    overflow-wrap: break-word;
-    white-space: pre-wrap;
-    line-height: 1.1;
-    width: 100%; /* 화면 너비 전체 */
-    max-width: 90%; /* 최대 너비 제한 */
-    height: auto; /* 높이는 텍스트 크기에 따라 동적으로 변경 */
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: 10px solid #861694;
+    transition: transform 0.2s;
+}
+
+.slider-container input[type="range"]::-webkit-slider-thumb:hover {
+        transform: scale(1.5); /* 호버 시 핸들 커짐 */
+}
+
+#font-size-slider-1 {
+}
+
+#font-size-slider-2 {
+    background: #1A237E;
+}
+
+#font-size-slider-3 {
+    background: #004D40;
+
+}
+
+
+/* 섹션별 슬라이더 thumb 스타일 */
+#font-size-slider-1::-webkit-slider-thumb {
+    border-color: #861694; /* 첫 번째 슬라이더 색상 */
+}
+
+#font-size-slider-2::-webkit-slider-thumb {
+    border-color: #1A237E; /* 두 번째 슬라이더 색상 */
+}
+
+#font-size-slider-3::-webkit-slider-thumb {
+    border-color: #004D40; /* 세 번째 슬라이더 색상 */
+}
+
+.slider-container span {
+    margin-top: 8px;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#output-1, #output-2, #output-3 {
+    -webkit-user-select: text; /* 텍스트 선택 가능 */
+    user-select: text; /* 텍스트 선택 가능 */
+    outline: none; /* 선택 시 기본 박스 제거 */
+    background: none; /* 선택 배경 제거 */
+    text-align: center; /* 텍스트 가로 중앙 정렬 */
+    vertical-align: middle; /* 텍스트 세로 중앙 정렬 */
+    line-height: 1;
+    width: 100%;
+    max-width: 90%;
+    height: auto;
+}
+
+#output-1 {
+    border: 2px dashed #861694;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(to bottom, transparent, #fff);
+    pointer-events: none;
+}
+
+/* 우측 상단 고정 버튼 */
+.toggle-button {
+    position: fixed;
+    top: 30px;
+    right: 50px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #fff;
+    border: 10px solid #000;
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.toggle-button:hover {
+    transform: scale(1.5); /* 버튼 호버 시 커짐 */
+}
+
+.toggle-button.active {
+    background: #FF3B80;
+    border-color: #861694;
 }
